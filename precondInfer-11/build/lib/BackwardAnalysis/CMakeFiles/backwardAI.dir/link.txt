@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../libbackwardAI.a CMakeFiles/backwardAI.dir/BackwardAnalysis.cpp.o CMakeFiles/backwardAI.dir/AbstractState.cpp.o CMakeFiles/backwardAI.dir/WPCondition.cpp.o CMakeFiles/backwardAI.dir/WPInferenceInterface.cpp.o CMakeFiles/backwardAI.dir/AliasICFG.cpp.o CMakeFiles/backwardAI.dir/InstructionDbgInfo.cpp.o CMakeFiles/backwardAI.dir/RangeAnalysis.cpp.o CMakeFiles/backwardAI.dir/RangeComputeInterface.cpp.o
+/usr/bin/ranlib ../libbackwardAI.a

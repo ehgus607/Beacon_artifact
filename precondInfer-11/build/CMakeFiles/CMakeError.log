@@ -1,0 +1,47 @@
+Determining if the include file util.h exists failed with the following output:
+Change Dir: /home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_67bf3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_67bf3.dir/build.make CMakeFiles/cmTC_67bf3.dir/build
+gmake[1]: Entering directory '/home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_67bf3.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -Wall -Wextra -Wno-unused-parameter  -o CMakeFiles/cmTC_67bf3.dir/CheckIncludeFile.c.o -c /home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: util.h: No such file or directory
+    1 | #include <util.h>
+      |          ^~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_67bf3.dir/build.make:78: CMakeFiles/cmTC_67bf3.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_67bf3/fast] Error 2
+
+
+
+Determining if the malloc_zone_statistics exist failed with the following output:
+Change Dir: /home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_66a56/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_66a56.dir/build.make CMakeFiles/cmTC_66a56.dir/build
+gmake[1]: Entering directory '/home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_66a56.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -Wall -Wextra -Wno-unused-parameter  -o CMakeFiles/cmTC_66a56.dir/CheckSymbolExists.cxx.o -c /home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:2:10: fatal error: malloc/malloc.h: No such file or directory
+    2 | #include <malloc/malloc.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_66a56.dir/build.make:78: CMakeFiles/cmTC_66a56.dir/CheckSymbolExists.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_66a56/fast] Error 2
+
+
+File /home/rvd5542/Beacon_artifact/precondInfer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <malloc/malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef malloc_zone_statistics
+  return ((int*)(&malloc_zone_statistics))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
